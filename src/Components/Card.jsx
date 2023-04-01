@@ -1,4 +1,5 @@
 import React from "react";
+import doctor from '../imagenesPrueba/doctor.jpg';
 
 
 const Card = ({ name, username, id }) => {
@@ -10,6 +11,11 @@ const Card = ({ name, username, id }) => {
   return (
     <div className="card">
         {/* En cada card deberan mostrar en name - username y el id */}
+        <div key={id}>
+          <img className="card-img"  src={doctor}  alt="Doctor" width={200}/>
+          <h3>{name}</h3>
+          <h2>{username}</h2>
+        </div>
 
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
