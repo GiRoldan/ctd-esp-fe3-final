@@ -58,7 +58,7 @@ const Form = () => {
         <br />
       </form>
       {err ? <h3>Por favor verifique su información nuevamente</h3> : null}
-      {show ? <h3>Gracias {input.inputName}, te contactaremos cuando antes vía mail</h3> : null}
+      {show ? <h3>Gracias {input.inputName}, te contactaremos cuanto antes vía mail</h3> : null}
     </div>
   );
 };
