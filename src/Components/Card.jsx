@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import doctor from "../imagenesPrueba/doctor.jpg";
+//import doctor from "../imagenesPrueba/doctor.jpg";
+//import doctor from "../images/doctor.jpg";
+
 import { useContextGlobal } from "./utils/global.context";
 
 const Card = ({ name, username, id }) => {
@@ -43,9 +45,10 @@ const Card = ({ name, username, id }) => {
       {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
       <Link key={id} to={`/dentist/${id}`}>
         <div key={id}>
-          <img className="card-img" src={doctor} alt="Doctor" width={200} />
+          <img className="card-img" src='/images/doctor.jpg' alt="Doctor" width={180} />
           <h3>{name}</h3>
           <h2>{username}</h2>
+          {/* <img src="/images/DH.png" alt="" /> */}
         </div>
       </Link>
 

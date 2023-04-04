@@ -15,6 +15,7 @@ const Favs = () => {
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
         {!dentistFav ? null : <Card/>}
+        {console.log({dentistFav})}
       </div>
     </>
   );
