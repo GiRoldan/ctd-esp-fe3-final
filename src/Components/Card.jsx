@@ -1,12 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-//import doctor from "../imagenesPrueba/doctor.jpg";
-//import doctor from "../images/doctor.jpg";
-
-import { useContextGlobal } from "./utils/global.context";
 
 const Card = ({ name, username, id, showButton }) => {
-  const { value } = useContextGlobal;
   // console.log(value);
 
   const urlById = `https://jsonplaceholder.typicode.com/users/${id}`;
@@ -34,13 +29,24 @@ const Card = ({ name, username, id, showButton }) => {
       alert('You add a new dentist to your favs! 😊')
   };
 
+  console.log('Antes ' + urlById);
+  
   useEffect(() => {
     fetch(urlById)
       .then((res) => res.json())
       .then((data) => setDentistSelectedById(data));
     console.log(dentistSelectedById);
-  }, [dentistSelectedById]);
+  }, []);
+  // }, [urlById, dentistSelectedById]);
+  //Esta línea sirve para que se actualice el localStorage cada vez q se agrega un nuevo fav
+  //El problema es:
+  // si la agrego se renderiza infinitas veces la app, la consola no para!!
+  // si NO la agrego, entonces cdo agrego favoritos, algunos se agregan al array y otros se pisan, es decir no todos se agregan
 
+
+
+  console.log('Después del fetch urlById ' + urlById);
+  console.log(dentistSelectedById);
   return (
     <div className="card">
       {/* En cada card deberan mostrar en name - username y el id */}
