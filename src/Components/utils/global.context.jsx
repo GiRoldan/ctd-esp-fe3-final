@@ -6,27 +6,34 @@ export const ContextGlobal = createContext();
 
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-
-  const url = "https://jsonplaceholder.typicode.com/users";
   const [value, setValue] = useState([]);
+  const url = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
     fetch(url)
-      .then((res) => res.json())
-      .then((data) => setValue(data));
+      .then(res => res.json())
+      .then(data => setValue(data));
   }, []);
+  console.log('soy el log de context' + value);
+  console.log('soy el log de value.name ' + value.name);
 
-  let dentistFav = localStorage.getItem("dentistFav");
-  //let parsedFav = JSON.parse(dentistFav)
-  // Renderiza un mismo favorito por cada card q se renderice!!! ojo!!!
-  // console.log(parsedFav);
+  console.log('soy el log de value:', value);
+if (value.length > 0) {
+  value.forEach(obj => console.log(`name: ${obj.name}, id: ${obj.id}`));
+}
 
-  useEffect(() => {
-    let dentistFav = localStorage.getItem("dentistFav");
-  }, []);
+
+  // let dentistFav = localStorage.getItem("dentistFav");
+  // //let parsedFav = JSON.parse(dentistFav)
+  // // Renderiza un mismo favorito por cada card q se renderice!!! ojo!!!
+  // // console.log(parsedFav);
+
+  // useEffect(() => {
+  //   let dentistFav = localStorage.getItem("dentistFav");
+  // }, []);
 
   return (
-    <ContextGlobal.Provider value={{ value, setValue, dentistFav }}>
+    <ContextGlobal.Provider value={{ value, setValue }}>
       {children}
     </ContextGlobal.Provider>
   );

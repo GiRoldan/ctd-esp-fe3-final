@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 import { useContextGlobal } from "./utils/global.context";
 
-const Card = ({ name, username, id }) => {
+const Card = ({ name, username, id, showButton }) => {
   const { value } = useContextGlobal;
-  console.log(value);
+  // console.log(value);
 
   const urlById = `https://jsonplaceholder.typicode.com/users/${id}`;
 
@@ -16,13 +16,21 @@ const Card = ({ name, username, id }) => {
   // Renderiza un mismo favorito por cada card q se renderice!!! ojo!!!
   // console.log(parsedFav);
 
+  let favs = localStorage.getItem('dentistFav')
+  console.log(JSON.parse(favs));
   const [dentistSelectedById, setDentistSelectedById] = useState({})
 
   const addFav = () => {
        // Aqui iria la logica para agregar la Card en el localStorage
+       if(favs){
+        let parsedFavs = JSON.parse(favs)
+          favs = [...parsedFavs, dentistSelectedById]
+       } else {
+          favs = [dentistSelectedById]
+       }
       console.log('Adding to favs the dentist id number: ' + dentistSelectedById.id + '. See the information below: ')
       console.log(dentistSelectedById);
-      localStorage.setItem('dentistFav', JSON.stringify(dentistSelectedById))
+      localStorage.setItem('dentistFav', JSON.stringify(favs))
       alert('You add a new dentist to your favs! 😊')
   };
 
@@ -31,7 +39,7 @@ const Card = ({ name, username, id }) => {
       .then((res) => res.json())
       .then((data) => setDentistSelectedById(data));
     console.log(dentistSelectedById);
-  }, []);
+  }, [dentistSelectedById]);
 
   return (
     <div className="card">
@@ -53,9 +61,11 @@ const Card = ({ name, username, id }) => {
       </Link>
 
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
+      {showButton && (
       <button onClick={addFav} className="favButton">
         ✨ Add fav ✨
       </button>
+      )}
     </div>
   );
 };
