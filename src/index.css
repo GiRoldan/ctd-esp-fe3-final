@@ -48,7 +48,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 100vw;
-  height: 10vw;
+  height: 5vw;
   margin-top: 2rem;
 }
 
@@ -135,9 +135,9 @@ tr:nth-child(even) {
 .footer-paragraph{
   background-color: red;
   text-align: center;
-  padding-bottom: 1vw;
-  margin-bottom: 2vw;
-  font-size: 1.5vw;
+  padding-bottom: 0.7vw;
+  margin-bottom: 0.8vw;
+  font-size: 1.2vw;
   font-weight: lighter;
 }
 
@@ -145,19 +145,19 @@ tr:nth-child(even) {
   display: flex;
   padding-left: 8vw;
   background-color: rgb(230, 228, 228);
-  height: 7vw;
+  height: 6vw;
 }
 
 .navbar p{
   width: 20vw;
   font-weight: 500;
-  font-size: 2.2vw;
+  font-size: 2vw;
 }
 
 .navbar nav h3{
-  font-weight:600;
-  margin-top: 2vw;
+  font-weight: 500;
   margin-right: 1vw;
+  font-size: 1.4vw;
 }
 
 .navbar nav button{
@@ -170,13 +170,19 @@ tr:nth-child(even) {
   font-size: 2.5vw;
   font-weight: bold;
   background-color: rgb(230, 228, 228);
-  height: 2.5vw;
-  margin-top: 2vw;
+  height: 2vw;
+  margin-top: 1.5vw;
 }
 
 .navbar nav .theme-btn{
   background-color: #000;
-  height: 2.5vw;
-  margin-top: 2vw;
-  border-radius: 0.5vw;
+  height: 2.4vw;
+  margin-top: 1.5vw;
+  border-radius: 0.6vw;
+  padding-bottom: 0.6vw;
+}
+
+.contact{
+  height: 30vw;
+  padding-left: 5vw;
 }
