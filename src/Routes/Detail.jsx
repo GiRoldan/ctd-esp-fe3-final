@@ -10,10 +10,6 @@ const Detail = () => {
   const { id } = useParams();
   console.log(id + "soy paramsId");
 
-  // const dentistIdSelected = value.find((v) => value.id == v.id )
-  // console.log(dentistIdSelected.id);
-
-  //******************** */
   const [dentist, setDentist] = useState({
     id: "",
     name: "",
@@ -21,7 +17,7 @@ const Detail = () => {
     address: {},
     phone: "",
     website: "",
-    company: {}
+    company: {},
   });
   const url = `https://jsonplaceholder.typicode.com/users/${id}`;
 
@@ -30,36 +26,16 @@ const Detail = () => {
       .then((resp) => resp.json())
       .then((data) => setDentist(data));
   }, []);
-  //****************************** */
+  // }, [url]);
 
-  console.log('dentist: '+ dentist);
-  console.log('dentist.id: '+ dentist.id);
-  console.log('dentist.name: '+ dentist.name);
+  console.log("dentist: " + dentist);
+  console.log("dentist.id: " + dentist.id);
+  console.log("dentist.name: " + dentist.name);
 
   return (
     // <button onClick={() => navigate('/')}>Volver al Home</button>
 
     <>
-      {/* <h1>Detail Dentist {dentistIdSelected.id} </h1> */}
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      {/* <table>
-        <tbody>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone number</th>
-            <th>Website</th>
-          </tr>
-          <tr>
-            <td>{dentistIdSelected.name}</td>
-            <td>{dentistIdSelected.email}</td>
-            <td>{dentistIdSelected.phone}</td>
-            <td>{dentistIdSelected.website}</td>
-          </tr>
-        </tbody>
-      </table> */}
-
       <h1>Detail Dentist {dentist.id} </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
@@ -72,10 +48,10 @@ const Detail = () => {
             <th>Website</th>
           </tr>
           <tr>
-          <td>{dentist.name}</td>
-          <td>{dentist.email}</td>
-          <td>{dentist.phone}</td>
-          <td>{dentist.website}</td>
+            <td>{dentist.name}</td>
+            <td>{dentist.email}</td>
+            <td>{dentist.phone}</td>
+            <td>{dentist.website}</td>
           </tr>
         </tbody>
       </table>

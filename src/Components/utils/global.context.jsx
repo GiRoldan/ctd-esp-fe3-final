@@ -22,16 +22,6 @@ if (value.length > 0) {
   value.forEach(obj => console.log(`name: ${obj.name}, id: ${obj.id}`));
 }
 
-
-  // let dentistFav = localStorage.getItem("dentistFav");
-  // //let parsedFav = JSON.parse(dentistFav)
-  // // Renderiza un mismo favorito por cada card q se renderice!!! ojo!!!
-  // // console.log(parsedFav);
-
-  // useEffect(() => {
-  //   let dentistFav = localStorage.getItem("dentistFav");
-  // }, []);
-
   return (
     <ContextGlobal.Provider value={{ value, setValue }}>
       {children}
