@@ -21,7 +21,7 @@ const Form = () => {
     })
   }
 
-  const funcionRebelde = (event) => {
+  const onSubmit = (event) => {
     console.log('entre a handlesubmit');
     event.preventDefault()
     if(input.inputName.indexOf(" ") !== 0
@@ -46,7 +46,7 @@ const Form = () => {
   return (
 
     <div>
-      <form onSubmit={funcionRebelde}>
+      <form onSubmit={onSubmit}>
         <br />
         <label>Please enter your name: </label>
         <input name='inputName' type="text" placeholder="Name" value={input.inputName} onChange={handleChange}/>

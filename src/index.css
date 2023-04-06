@@ -48,7 +48,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 100vw;
-  height: 5vw;
+  height: 10vw;
   margin-top: 2rem;
 }
 
@@ -78,6 +78,10 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+}
+
+.dark .card h3, h2, .favButton{
+  color: white;
 }
 
 .card:hover{
@@ -114,17 +118,38 @@ tr:nth-child(even) {
 }
 
 .dark{
-  background-color: #12121296;
+  background-color: rgb(20, 19, 19);
   color: white;
+  height: 100%;
 }
 .dark > a {
   color: white;
 }
 
+.dark .navbar{
+  display: flex;
+  padding-left: 8vw;
+  background-color: black;
+  height: 6vw;
+  color: white;
+}
+
+.dark .navbar h3{
+  color: white;
+}
+
+.dark .navbar .back-btn{
+  background-color: #000;
+  color: white;
+}
+
+.dark .navbar .theme-btn{
+  background-color: grey;
+} 
+
 .footer-logo-and-icons{
   display: flex;
   justify-content: space-around;
-
 }
 
 .footer-icons{
@@ -139,6 +164,18 @@ tr:nth-child(even) {
   margin-bottom: 0.8vw;
   font-size: 1.2vw;
   font-weight: lighter;
+}
+
+.dark footer{
+  background-color: #000;
+}
+
+.dark .footer-logo-and-icons img{
+  filter: brightness(2000%);
+}
+
+.dark .footer-logo-and-icons{
+  filter: brightness(500%);
 }
 
 .navbar{
@@ -183,6 +220,6 @@ tr:nth-child(even) {
 }
 
 .contact{
-  height: 30vw;
+  height: 26vw;
   padding-left: 5vw;
 }

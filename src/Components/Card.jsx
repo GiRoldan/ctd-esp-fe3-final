@@ -33,7 +33,6 @@ const Card = ({ name, username, id, showButton }) => {
     fetch(urlById)
       .then((res) => res.json())
       .then((data) => setDentistSelectedById(data));
-    console.log(dentistSelectedById);
   }, []);
   // }, [urlById, dentistSelectedById]);
   //Esta línea sirve para que se actualice el localStorage cada vez q se agrega un nuevo fav
@@ -41,6 +40,7 @@ const Card = ({ name, username, id, showButton }) => {
   // si la agrego se renderiza infinitas veces la app, la consola no para!!
   // si NO la agrego, entonces cdo agrego favoritos, algunos se agregan al array y otros se pisan, es decir no todos se agregan
 
+  console.log(dentistSelectedById);
   console.log("Después del fetch urlById " + urlById);
   console.log(dentistSelectedById);
   return (
