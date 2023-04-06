@@ -4,13 +4,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 const themes = {
   dark: {
     theme: false,
-    // bgColor: 'black',
-    // color: 'white'
   },
   light: {
     theme: true,
-    // bgColor: 'white',
-    // color: 'black'
   },
 };
 
@@ -55,13 +51,6 @@ export const ContextProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setValue(data));
   }, []);
-  //   console.log('soy el log de context' + value);
-  //   console.log('soy el log de value.name ' + value.name);
-
-  //   console.log('soy el log de value:', value);
-  // if (value.length > 0) {
-  //   value.forEach(obj => console.log(`name: ${obj.name}, id: ${obj.id}`));
-  // }
 
   const [themeState, themeDispatch] = useReducer(
     themeReducer,
@@ -73,8 +62,6 @@ export const ContextProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("favs", JSON.stringify(favState));
   }, [favState]);
-
-  console.log("soy favState " + favState);
 
   return (
     <ContextGlobal.Provider

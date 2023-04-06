@@ -5,11 +5,8 @@ import { useContextGlobal } from "../Components/utils/global.context";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
-  // let favs = localStorage.getItem("dentistFav");
-  // let parsedFavs = JSON.parse(favs);
 
   const { favState, favDispatch } = useContextGlobal();
-
   
   const clearFavs = () => {
     favDispatch({ type: "CLEAR_FAV" });

@@ -33,8 +33,6 @@ const Detail = () => {
   console.log("dentist.name: " + dentist.name);
 
   return (
-    // <button onClick={() => navigate('/')}>Volver al Home</button>
-
     <>
       <h1>Detail Dentist {dentist.id} </h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
