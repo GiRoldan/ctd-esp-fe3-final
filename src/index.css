@@ -152,7 +152,8 @@ tr:nth-child(even) {
 
 .dark .navbar .theme-btn{
   background-color: white;
-} 
+  padding-bottom: 0.4vw;
+}
 
 .footer-logo-and-icons{
   display: flex;
