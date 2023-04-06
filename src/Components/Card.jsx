@@ -1,30 +1,42 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useContextGlobal } from "./utils/global.context";
 
 const Card = ({ name, username, id, showButton }) => {
 
+  const {favDispatch, favState} = useContextGlobal()
+
   const urlById = `https://jsonplaceholder.typicode.com/users/${id}`;
 
-  let favs = localStorage.getItem("dentistFav");
-  console.log(JSON.parse(favs));
+  // let favs = localStorage.getItem("dentistFav");
+  // console.log(JSON.parse(favs));
   const [dentistSelectedById, setDentistSelectedById] = useState({});
 
   const addFav = () => {
     // Aqui iria la logica para agregar la Card en el localStorage
-    if (favs) {
-      let parsedFavs = JSON.parse(favs);
-      favs = [...parsedFavs, dentistSelectedById];
+    // if (favs) {
+    //   let parsedFavs = JSON.parse(favs);
+    //   favs = [...parsedFavs, dentistSelectedById];
+    // } else {
+    //   favs = [dentistSelectedById];
+    // }
+    // console.log(
+    //   "Adding to favs the dentist id number: " +
+    //     dentistSelectedById.id +
+    //     ". See the information below: "
+    // );
+    // console.log(dentistSelectedById);
+    // localStorage.setItem("dentistFav", JSON.stringify(favs));
+    // alert("You add a new dentist to your favs! 😊");
+
+    const existFav = favState.find((f) => f.id === dentistSelectedById.id);
+
+    if (existFav) {
+      alert('Warning! ⚠️\nYou can not add a dentist that is already in your favorites list.');
     } else {
-      favs = [dentistSelectedById];
+    favDispatch({type: 'ADD_FAV', payload: dentistSelectedById})
+      alert('Congratulations! ✅\nYou add a new dentist to your favs! 😊');
     }
-    console.log(
-      "Adding to favs the dentist id number: " +
-        dentistSelectedById.id +
-        ". See the information below: "
-    );
-    console.log(dentistSelectedById);
-    localStorage.setItem("dentistFav", JSON.stringify(favs));
-    alert("You add a new dentist to your favs! 😊");
   };
 
   console.log("Antes " + urlById);
