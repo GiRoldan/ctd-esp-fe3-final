@@ -48,7 +48,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 100vw;
-  height: 10vw;
+  height: 8vw;
   margin-top: 2rem;
 }
 
@@ -58,7 +58,6 @@ footer > img{
 }
 footer > p{
   margin: 0;
-  padding-top: 0.7rem;
 }
 
 form{
@@ -80,7 +79,15 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
-.dark .card h3, h2, .favButton{
+.dark .card h3{
+  color: white;
+}
+
+.dark .card h2{
+  color: white;
+}
+
+.dark .card .favButton{
   color: white;
 }
 
@@ -144,12 +151,13 @@ tr:nth-child(even) {
 }
 
 .dark .navbar .theme-btn{
-  background-color: grey;
+  background-color: white;
 } 
 
 .footer-logo-and-icons{
   display: flex;
   justify-content: space-around;
+  margin-bottom: 1vw;
 }
 
 .footer-icons{
@@ -162,6 +170,7 @@ tr:nth-child(even) {
   text-align: center;
   padding-bottom: 0.7vw;
   margin-bottom: 0.8vw;
+  padding-top: 0.8vw;
   font-size: 1.2vw;
   font-weight: lighter;
 }
