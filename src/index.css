@@ -233,3 +233,17 @@ tr:nth-child(even) {
   height: 26vw;
   padding-left: 5vw;
 }
+
+.delete-favs-btn{
+  border-radius: 2vw;
+  border: none;
+  float: right;
+  height: 2.5vw;
+  margin-right: 1vw;
+  margin-top: 0.5vw;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: #000;
+  font-style:inherit;
+  background-color: rgb(239, 76, 76);
+}

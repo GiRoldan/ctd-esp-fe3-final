@@ -8,13 +8,19 @@ const Favs = () => {
   // let favs = localStorage.getItem("dentistFav");
   // let parsedFavs = JSON.parse(favs);
 
-  const { favState } = useContextGlobal();
+  const { favState, favDispatch } = useContextGlobal();
 
+  
+  const clearFavs = () => {
+    favDispatch({ type: "CLEAR_FAV" });
+  };
 
   return (
     <>
       {favState && favState.length > 0 ? (
         <>
+        {<button className="delete-favs-btn" onClick={clearFavs}>Remove all</button>}
+        <br />
           <h1>Dentists Favs</h1>
           <div className="card-grid">
             {/* este componente debe consumir los destacados del localStorage */}

@@ -36,6 +36,8 @@ const favReducer = (state, action) => {
   switch (action.type) {
     case "ADD_FAV":
       return [...state, action.payload];
+    case "CLEAR_FAV":
+      return [];
     default:
       throw new Error();
   }
