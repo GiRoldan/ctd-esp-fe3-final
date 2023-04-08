@@ -32,6 +32,7 @@ nav{
   display: flex;
   width: 80vw;
   justify-content: flex-end;
+  margin-right: 2vw;
 }
 
 a{
@@ -148,6 +149,7 @@ tr:nth-child(even) {
 
 .dark .navbar p{
   color: white;
+
 }
 
 .dark .navbar h3{
@@ -209,6 +211,8 @@ tr:nth-child(even) {
   font-weight: 500;
   font-size: 2vw;
   color: black;
+  padding-bottom: 5vw;
+  margin-top: 1.2vw;
 }
 
 .navbar nav h3{
@@ -328,6 +332,7 @@ tr:nth-child(even) {
 
   .navbar p{
     font-size: 2.5vw;
+    margin-top: 2vw;
   }
 
   .navbar nav h3{
@@ -344,6 +349,7 @@ tr:nth-child(even) {
     height: 3vw;
     margin-top: 2.1vw;
     padding-bottom: 0.7vw;
+    border-radius: 0.8vw;
   }
   
   .contact{
@@ -390,6 +396,7 @@ tr:nth-child(even) {
 
   .navbar p{
     font-size: 3.5vw;
+    margin-top: 3vw;
   }
 
   .navbar nav h3{
@@ -406,6 +413,7 @@ tr:nth-child(even) {
     height: 5vw;
     margin-top: 3vw;
     padding-bottom: 1vw;
+    border-radius: 1.5vw;
   }
   
   .contact{
