@@ -11,13 +11,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+}
+
+.dark{
+  background-color: rgb(20, 19, 19);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
@@ -129,14 +137,7 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
-  background-color: rgb(20, 19, 19);
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 .dark > a {
   color: white;
@@ -146,7 +147,7 @@ tr:nth-child(even) {
   display: flex;
   padding-left: 8vw;
   background-color: black;
-  height: 6vw;
+  height: 10vh;
   color: white;
 }
 
@@ -206,7 +207,7 @@ tr:nth-child(even) {
   display: flex;
   padding-left: 8vw;
   background-color: rgb(230, 228, 228);
-  height: 6vw;
+  height: 10vh;
 }
 
 .navbar p{
@@ -248,7 +249,9 @@ tr:nth-child(even) {
 
 .contact{
   padding-left: 5vw;
+  height: 70vh;
 }
+
 
 .contact p{
   margin-bottom: 4vw;
@@ -302,10 +305,12 @@ tr:nth-child(even) {
   color: #000;
 }
 
+.detail-dentist-container{
+  height: 70vh;
+}
+
+
 @media screen and (min-width: 769px) and (max-width: 1024px){
-  .contact{
-    height: 40vw;
-  }
   .contact form{
     height: 20vw;
   }
@@ -329,14 +334,6 @@ tr:nth-child(even) {
 }
 
 @media screen and (min-width: 426px) and (max-width: 768px){
-  .navbar{
-    height: 8vw;
-  }
-
-  .dark .navbar{
-    height: 8vw;
-  }
-
   .navbar p{
     font-size: 2.5vw;
     margin-top: 2vw;
@@ -359,9 +356,6 @@ tr:nth-child(even) {
     border-radius: 0.8vw;
   }
 
- .contact{
-    height: 45vw;
-  }
   .contact form{
     height: 25vw;
   }
@@ -388,6 +382,8 @@ tr:nth-child(even) {
     font-weight: 500;
   }
 
+
+
   footer{
     height: 10vw;
   }
@@ -398,13 +394,6 @@ tr:nth-child(even) {
 }
 
 @media screen and (max-width: 425px){
-  .navbar{
-    height: 13vw;
-  }
-
-  .dark .navbar{
-    height: 13vw;
-  }
 
   .navbar p{
     font-size: 3.5vw;
@@ -427,10 +416,7 @@ tr:nth-child(even) {
     padding-bottom: 1vw;
     border-radius: 1.5vw;
   }
-  
-  .contact{
-    height: 80vw;
-  }
+
   .contact form{
     height: 40vw;
   }
@@ -451,7 +437,7 @@ tr:nth-child(even) {
   }
 
   .delete-favs-btn{
-    height: 20vw;
+    height: 5vh;
     width: 16vw;
     margin-left: 78vw;
     border-radius: 5vw;
@@ -460,7 +446,7 @@ tr:nth-child(even) {
   }
 
   footer{
-    height: 20vw;
+    height: 15vh;
   }
 
   .footer-paragraph{
