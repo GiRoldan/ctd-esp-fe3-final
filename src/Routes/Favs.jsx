@@ -17,7 +17,6 @@ const Favs = () => {
       {favState && favState.length > 0 ? (
         <>
         {<button className="delete-favs-btn" onClick={clearFavs}>Remove all</button>}
-        <br />
           <h1>Dentists Favs</h1>
           <div className="card-grid">
             {/* este componente debe consumir los destacados del localStorage */}
