@@ -46,8 +46,7 @@ const Form = () => {
   return (
 
     <div>
-      <form onSubmit={onSubmit}>
-        <br />
+      <form onSubmit={onSubmit} className="form">
         <label>Please enter your name: </label>
         <input name='inputName' type="text" placeholder="Name" value={input.inputName} onChange={handleChange}/>
         <br />

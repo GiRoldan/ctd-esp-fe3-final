@@ -8,25 +8,29 @@ import { useContextGlobal } from "./utils/global.context";
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const {themeState, themeDispatch} = useContextGlobal()
+  const { themeState, themeDispatch } = useContextGlobal();
 
   const switchTheme = () => {
-    if(themeState.theme){
-      themeDispatch({type: 'SWITCH_DARK'})
+    if (themeState.theme) {
+      themeDispatch({ type: "SWITCH_DARK" });
     } else {
-      themeDispatch({type:'SWITCH_LIGHT'})
+      themeDispatch({ type: "SWITCH_LIGHT" });
     }
-
-  }
+  };
 
   return (
     <div className="navbar">
-      <p>
-        <span style={{ color: "red" }}>D</span>H Odonto
-      </p>
+      <Link to={routes.home}>
+        <p>
+          <span style={{ color: "red" }}>D</span>H Odonto
+        </p>
+      </Link>
+
       <nav>
         {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-        <button className="back-btn" onClick={() => navigate(-1)}>↩</button>
+        <button className="back-btn" onClick={() => navigate(-1)}>
+          ↩
+        </button>
         <Link to={routes.home}>
           <h3>Home</h3>
         </Link>
@@ -37,7 +41,9 @@ const Navbar = () => {
           <h3>Favs</h3>
         </Link>
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-        <button  className="theme-btn" onClick={switchTheme}>{themeState.theme ? '🌙' : '🌞'}</button>
+        <button className="theme-btn" onClick={switchTheme}>
+          {themeState.theme ? "🌙" : "🌞"}
+        </button>
       </nav>
     </div>
   );

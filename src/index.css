@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -49,7 +54,7 @@ footer {
   bottom: 0;
   width: 100vw;
   height: 8vw;
-  margin-top: 2rem;
+  margin-top: 5vw;
 }
 
 footer > img{
@@ -141,6 +146,10 @@ tr:nth-child(even) {
   color: white;
 }
 
+.dark .navbar p{
+  color: white;
+}
+
 .dark .navbar h3{
   color: white;
 }
@@ -199,6 +208,7 @@ tr:nth-child(even) {
   width: 20vw;
   font-weight: 500;
   font-size: 2vw;
+  color: black;
 }
 
 .navbar nav h3{
@@ -230,15 +240,19 @@ tr:nth-child(even) {
 }
 
 .contact{
-  height: 26vw;
+  height: 28vw;
   padding-left: 5vw;
+}
+
+.contact p{
+  margin-bottom: 4vw;
 }
 
 .delete-favs-btn{
   border-radius: 2vw;
   border: none;
-  float: right;
   height: 2.5vw;
+  width: 8vw;
   margin-right: 1vw;
   margin-top: 0.5vw;
   font-size: 0.7rem;
@@ -246,4 +260,183 @@ tr:nth-child(even) {
   color: #000;
   font-style:inherit;
   background-color: rgb(239, 76, 76);
+  margin-left: 90vw;
+}
+
+.contact form{
+  height: 15vw;
+  background-color: #ccc;
+  border-radius: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.contact form label{
+  font-style:oblique;
+}
+
+.contact form input{
+  font-style: italic;
+  border-radius: 2vw;
+}
+
+.contact form button{
+  width: 8vw;
+  margin-left: 6vw;
+  border-radius: 1vw;
+  font-weight: 700;
+  background-color: grey;
+}
+
+.dark label{
+  color: #000;
+}
+
+.dark table tbody td{
+  color: #000;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+  .contact{
+    height: 40vw;
+  }
+  .contact form{
+    height: 20vw;
+  }
+
+  .contact form button{
+    margin-left: 10vw;
+  }
+
+  footer{
+    height: 10vw;
+  }
+
+  .footer-paragraph{
+    font-size: 1.6vw;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+  .navbar{
+    height: 8vw;
+  }
+
+  .dark .navbar{
+    height: 8vw;
+  }
+
+  .navbar p{
+    font-size: 2.5vw;
+  }
+
+  .navbar nav h3{
+    font-size: 1.8vw;
+  }
+  
+  .back-btn{
+    font-size: 2.5vw;
+    height: 2vw;
+    margin-top: 2.5vw;
+  }
+
+  .navbar nav .theme-btn{
+    height: 3vw;
+    margin-top: 2.1vw;
+    padding-bottom: 0.7vw;
+  }
+  
+  .contact{
+    height: 45vw;
+  }
+  .contact form{
+    height: 25vw;
+  }
+
+  .contact form label{
+    font-size: 1.8vw;
+  }
+
+  .contact form button{
+    margin-left: 14vw;
+  }
+
+  .delete-favs-btn{
+    height: 3vw;
+    width: 12vw;
+    font-size: 0.7rem;
+    border-radius: 4vw;
+    margin-left: 85vw;
+    font-weight: 700;
+  }
+
+  footer{
+    height: 10vw;
+  }
+
+  .footer-paragraph{
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .navbar{
+    height: 13vw;
+  }
+
+  .dark .navbar{
+    height: 13vw;
+  }
+
+  .navbar p{
+    font-size: 3.5vw;
+  }
+
+  .navbar nav h3{
+    font-size: 2.8vw;
+  }
+  
+  .back-btn{
+    font-size: 4vw;
+    height: 2.5vw;
+    margin-top: 3.2vw;
+  }
+
+  .navbar nav .theme-btn{
+    height: 5vw;
+    margin-top: 3vw;
+    padding-bottom: 1vw;
+  }
+  
+  .contact{
+    height: 80vw;
+  }
+  .contact form{
+    height: 40vw;
+  }
+
+  .contact form label{
+    font-size: 3vw;
+  }
+
+  .contact form button{
+    width: 20vw;
+    margin-left: 24vw;
+  }
+
+  .delete-favs-btn{
+    height: 5vw;
+    width: 20vw;
+    margin-left: 75vw;
+    border-radius: 5vw;
+    font-weight: 700;
+  }
+
+  footer{
+    height: 20vw;
+  }
+
+  .footer-paragraph{
+    font-size: 3.5vw;
+  }
 }
